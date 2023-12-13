@@ -1,0 +1,66 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.modal{
+    background-color: v.$black;
+    color: v.$white;
+    border: .4rem solid v.$white;
+    text-align: center;
+    &::backdrop{
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    h2{
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    }
+
+    .types-grid{
+        h3{
+            margin-bottom: 1rem;
+        }
+
+
+        @include m.phone {
+            h3{
+                margin-bottom: 0;
+            }
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @include m.tablet {
+            h3{
+                margin-bottom: 0;
+            }
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @include m.desktop {
+            h3{
+                margin-bottom: 0;
+            }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    .modal-button{
+        margin-top: 5rem;
+        button{
+            margin-bottom: 1rem;
+            @include m.phone {
+                margin-bottom: unset;
+            }
+        }
+        @include m.phone {
+            text-align: unset;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

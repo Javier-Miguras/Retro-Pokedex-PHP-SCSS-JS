@@ -1,0 +1,145 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.poke-page{
+    display: block;
+    margin-bottom: 2rem;
+    @include m.phone {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 2rem;
+        width: calc(100% - 2rem);
+    }
+    p{
+        color: v.$white;
+        font-size: 2.4rem;
+    }
+    .pokedex-img{
+        margin-bottom: 2rem;
+        @include m.phone {
+            margin-bottom: unset;
+        }
+        img{
+            width: 100%;
+            border: .4rem solid v.$black;
+        }
+    }
+    .pokedex-description{
+        grid-column: 1/3;
+        p{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .poke-type{
+            color: v.$white;
+            margin-top: 2rem;
+            @include m.phone {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            p{
+                margin-bottom: 2rem;
+                @include m.tablet {
+                    margin: 0;    
+                }
+            }
+            h3{
+                font-size: 2.8rem;
+                padding: 1rem 3rem;
+                border-radius: 3rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                @include m.tablet {
+                    margin: 0;    
+                }
+
+            }
+            .type-1{
+                text-transform: uppercase;
+            }
+        }
+    }
+    .pokedex-info{
+        margin-bottom: 2rem;
+        @include m.phone {
+            margin-bottom: unset;
+        }
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        .pokedex-name{
+            p{
+                margin: 1rem;
+            }
+            span{
+                font-size: 4rem;
+                @include m.desktop {
+                    font-size: 6rem;
+                }
+            }
+        }
+
+        .pokedex-extra{
+            p{
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+.pokedex-description,
+.pokedex-info{
+    background-color: v.$black;
+    padding: 2rem;
+    border: .4rem solid v.$white;
+}
+
+//Types colors
+
+.Grass{
+    background-color: #4aa55a;
+}
+.Bug{
+    background-color: #95ac59;
+}
+.Poison{
+    background-color: #ad7bbd;
+}
+.Water{
+    background-color: #568ed3;
+}
+.Rock{
+    background-color: #928d94;
+}
+.Psychic{
+    background-color: #ea73ab;
+}
+.Normal{
+    background-color: #c89674;
+}
+.Ice{
+    background-color: #8aa2e8;
+}
+.Ground{
+    background-color: #ad734a;
+}
+.Ghost{
+    background-color: #584166;
+}
+.Flying{
+    background-color: #8787bd;
+}
+.Fire{
+    background-color: #e26b3a;
+}
+.Fighting{
+    background-color: #a96976;
+}
+.Electric{
+    background-color: #dab635;
+}
+.Dragon{
+    background-color: #e3885d;
+}

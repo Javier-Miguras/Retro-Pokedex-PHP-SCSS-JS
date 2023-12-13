@@ -1,0 +1,55 @@
+@use '../base/variables' as v;
+
+.btn{
+    border-style: none;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+}
+
+.btn-block{
+    display: block;
+    border-style: none;
+    cursor: pointer;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: v.$primary;
+    color: v.$white;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: v.$lightPrimary;
+    }
+}
+
+.btn-secondary{
+    background-color: v.$lightPrimary;
+    color: v.$white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: v.$gray;
+    }
+}
+
+.btn-filter{
+    background-color: v.$black;
+    color: v.$white;
+    padding: .3rem .8rem;
+    border: .3rem solid v.$white;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.selected{
+    border: .4rem solid v.$white;
+    box-sizing: border-box !important;
+}

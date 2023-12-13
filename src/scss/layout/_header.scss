@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+
+
+header{
+    background-color: v.$lightPrimary;
+    h1{
+        font-family: v.$primaryFont;
+        font-size: 5rem;
+        padding: 2rem 0;
+        color: v.$white;
+        text-align: center;
+        
+    }
+}
